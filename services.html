@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Services</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* ===== Base Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 5%;
+    }
+
+    .services-section {
+      max-width: 1200px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 3rem;
+      margin-bottom: 60px;
+      background: linear-gradient(90deg, #00fff2, #00bcd4, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    /* ===== Services Grid ===== */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 40px;
+    }
+
+    /* ===== Service Card ===== */
+    .service-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 60%);
+      transition: 0.6s;
+    }
+
+    .service-card:hover::before {
+      top: 0;
+      left: 0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      border-color: rgba(0, 255, 255, 0.3);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #00fff2;
+      transition: 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: rotate(8deg) scale(1.1);
+      color: #00e6ff;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #b5b5b5;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .services-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="services-section">
+    <h1>What I Offer</h1>
+
+    <div class="services-container">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Building modern, responsive, and high-performance websites using HTML, CSS, JavaScript, and React.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI / UX Design</h3>
+        <p>Designing sleek and intuitive interfaces that deliver beautiful and user-friendly experiences.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Frontend Engineering</h3>
+        <p>Transforming designs into functional and scalable frontends with animations and interactivity.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Website Optimization</h3>
+        <p>Improving site speed, SEO, and accessibility for an enhanced user experience and performance boost.</p>
+      </div>
+    </div>
+  </section>
+  <a href="dashboard1.html"></a>
+
+</body>
+</html>
